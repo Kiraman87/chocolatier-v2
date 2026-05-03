@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased;
+    font-family: var(--font-geist-sans), system-ui, sans-serif;
+    background: #faf8f5;
+    color: #1a1a1a;
+    line-height: 1.6;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 400;
+  }
+
+  .font-label {
+    font-family: var(--font-geist-mono), ui-monospace, monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 11px;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 text-sm font-medium transition-all duration-300;
+    background: #1a1a1a;
+    color: #faf8f5;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  
+  .btn-primary:hover {
+    background: #2c1810;
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-8 py-4 text-sm font-medium transition-all duration-300;
+    background: transparent;
+    color: #1a1a1a;
+    border: 1px solid #1a1a1a;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .btn-outline:hover {
+    background: #1a1a1a;
+    color: #faf8f5;
+  }
+
+  .card-editorial {
+    background: #ffffff;
+    border: 1px solid #e8e4df;
+    padding: 2rem;
+    transition: border-color 0.3s ease;
+  }
+
+  .card-editorial:hover {
+    border-color: #c9a962;
+  }
+
+  .divider-gold {
+    width: 60px;
+    height: 1px;
+    background: #c9a962;
+    margin: 2rem 0;
+  }
+}
