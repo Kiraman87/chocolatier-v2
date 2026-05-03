@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
+import { AntdThemeProvider } from '@/components/ui/antd-theme'
+import StyledComponentsRegistry from '@/components/ui/antd-registry'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -22,7 +24,11 @@ export default function RootLayout({
         />
       </head>
       <body className={`${GeistSans.variable} ${GeistMono.variable}`}>
-        {children}
+        <StyledComponentsRegistry>
+          <AntdThemeProvider>
+            {children}
+          </AntdThemeProvider>
+        </StyledComponentsRegistry>
       </body>
     </html>
   )
